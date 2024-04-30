@@ -12,6 +12,48 @@
     </ul>
   <% end %>
 </div>
+<div class="experiment">
+  <%# experiment %>
+  <table class="table table-bordered" id="classroom-table">
+    <thead>
+      <tr>
+        <th>Column 1</th>
+        <th>Aisle</th>
+        <th>Column 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <td>
+        <div class="list-group" id="column1" data-controller="sortable" data-sortable-animation-value="150">
+          <li class="list-group-item column-student">
+            Tatsuya Hirotani
+          </li>
+          <li class="list-group-item column-student">
+            Kelly Fisher
+          </li>
+        </div>
+      </td>
+      <td>
+        <div class="list-group" id="aisle1">
+        </div>
+      </td>
+      <td>
+        <div class="list-group" id="column2" data-controller="sortable" data-sortable-animation-value="150">
+          <li class="list-group-item column-student">
+            Ariel Cardinal
+          </li>
+          <li class="list-group-item column-student">
+            Sakura Taiga
+          </li>
+          <li class="list-group-item column-student">
+            Shinoka Tamanaka
+          </li>
+        </div>
+      </td>
+    </tbody>
+  </table>
+  <%# experiment end %>
+</div>
 <div>
   <%= link_to "Edit this kanban", edit_kanban_path(@kanban) %> |
   <%= link_to "Back to kanbans", kanbans_path %>
