@@ -6,19 +6,19 @@ import "@popperjs/core"
 import "bootstrap"
 
 import { Application } from "@hotwired/stimulus"
-// import Sortable from '@stimulus-components/sortable'
-// import { initKanbanSortable } from './initSortable'
+import Sortable from '@stimulus-components/sortable'
+import { initKanbanSortable } from './initSortable'
 
-// document.addEventListener('turbolinks:load', () => {
-//   const kanbanUls = document.querySelectorAll(".kanban .kanban-col");
-//   console.log(kanbanUls);
-//   if (kanbanUls) {
-//     initKanbanSortable(kanbanUls);
-//   }
-// });
+document.addEventListener('turbolinks:load', () => {
+  const kanbanUls = document.querySelectorAll(".kanban .kanban-col");
+  console.log(kanbanUls);
+  if (kanbanUls) {
+    initKanbanSortable(kanbanUls);
+  }
+});
 
-// const application = Application.start()
-// application.register('sortable', Sortable)
+const application = Application.start()
+application.register('sortable', Sortable)
 
 // Configure Stimulus development experience
 application.debug = false
